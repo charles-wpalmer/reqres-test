@@ -1,0 +1,24 @@
+{
+    "name": "cwp/users",
+    "autoload": {
+        "psr-4": {
+            "Cwp\\Users\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "charles palmer"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^2.34"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
