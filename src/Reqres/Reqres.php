@@ -22,10 +22,7 @@ class Reqres
     public function createUser(User $user): int
     {
         try {
-            $response = $this->client->post($this->baseUri . 'users', [
-                'name' => $user->getName(),
-                'job'  => $user->getJob(),
-            ]);
+            $response = $this->client->post($this->baseUri . 'users', $user->toArray());
 
             return (int) json_decode((string) $response->getBody(), true)['id'];
         } catch (GuzzleException $e) {

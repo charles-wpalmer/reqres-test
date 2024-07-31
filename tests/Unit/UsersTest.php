@@ -17,7 +17,7 @@ beforeEach(function () {
     $this->userRepository = new Reqres($client);
 
     $reflection = new ReflectionClass(Users::class);
-    $instanceProperty = $reflection->getProperty('repository');
+    $instanceProperty = $reflection->getProperty('reqres');
     $instanceProperty->setAccessible(true);
     $instanceProperty->setValue(null, $this->userRepository);
 });

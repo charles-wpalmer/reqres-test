@@ -11,15 +11,15 @@ use GuzzleHttp\Client;
 
 class Users
 {
-    private static ?Reqres $repository = null;
+    private static ?Reqres $reqres = null;
 
     private static function getInstance(): Reqres
     {
-        if (self::$repository === null) {
-            self::$repository = new Reqres(new Client());
+        if (self::$reqres === null) {
+            self::$reqres = new Reqres(new Client());
         }
 
-        return self::$repository;
+        return self::$reqres;
     }
 
     /**

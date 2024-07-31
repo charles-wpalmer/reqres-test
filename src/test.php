@@ -9,4 +9,6 @@ var_dump(Users::all());
 
 var_dump(Users::get(1));
 
+var_dump(json_encode(Users::get(1)));
+
 var_dump(Users::create(new User(null, 'Charles', 'Job')));
